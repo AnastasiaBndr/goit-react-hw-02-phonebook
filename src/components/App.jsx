@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import css from './App.module.css';
 import Notiflix from 'notiflix';
 import debounce from "lodash.debounce";
+import PropTypes from 'prop-types';
 
 import Filter from './Filter';
 import ContactList from "./ContactList";
@@ -84,4 +85,9 @@ export class App extends Component {
 
 };
 
-// some comment
+App.propTypes = {
+  contacts: PropTypes.array,
+  name: PropTypes.string,
+  number: PropTypes.string,
+  filter: PropTypes.string,
+}
