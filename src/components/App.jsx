@@ -53,7 +53,17 @@ export class App extends Component {
         const idNumb = contacts.length + 1;
         contacts.push({ id: "id-" + idNumb, name: name, number: number });
         const newArr = contacts;
-        this.setState({ contacts: newArr })
+        this.setState({ contacts: newArr });
+
+        var getValue= document.getElementById("name");
+        if (getValue.value !=="") {
+            getValue.value = "";
+        }
+
+        getValue= document.getElementById("tel");
+        if (getValue.value !=="") {
+            getValue.value = "";
+        }
       }
 
     }
